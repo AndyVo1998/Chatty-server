@@ -44,7 +44,7 @@ wss.on('connection', (socket) => {
     broadcastChatSize();
     const colour = getColour();
 
-    wss.on('close', () => {
+    socket.on('close', () => {
         broadcastChatSize();
     })
 
